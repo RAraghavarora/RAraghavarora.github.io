@@ -9,18 +9,18 @@
 locale                   : "en-US"
 title                    : "Hoshiningen"
 title_separator          : "-"
-name                     : "Brian Smith"
-description              : "A central location where I can express myself through a personal blog and where I can display the projects I've been working on over the last couple of years."
-url                      : "https://hoshiningen.github.io"
+name                     : "Raghav Arora"
+description              : "Portfolio website containing my information about me as well as my projects. You can find my CV and contact information here as well."
+url                      : "https://raraghavarora.github.io"
 baseurl                  : 
-gh_repo                  : "https://github.com/Hoshiningen/hoshiningen.github.io"
+gh_repo                  : "https://github.com/RAraghavarora/RAraghavarora.github.io"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            :  # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "facebook", "google-plus", custom"
   disqus:
-    shortname            : "Hoshiningen"
+    shortname            : "Raghav"
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
@@ -61,27 +61,27 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Brian Smith"
+  name             : "Raghav Arora"
   avatar           : "profile.jpg"
-  bio              : "A computer science student at Appalachian State University who also happens to be an unashamed cheese-a-tarian, computer geek, nerd, and bird lover."
-  location         : "Apex, North Carolina"
-  email            : "Hoshiningen@gmail.com"
+  bio              : "A student of Electrical and Electronics Engineering at Birla Institute of Technology and Science, Pilani who is also doing his Masters in Chemistry at the same institute. He has some interest and skills in Computer Science and is also unashamed to call himself a chess player, computer geek, privacy nerd, and software lover."
+  location         : "Dehradun, India"
+  email            : "f20171016@pilani.bits-pilani.ac.in"
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : brian.smith.5815
+  facebook         : RaghavArora0
   foursquare       :
-  github           : "Hoshiningen"
+  github           : "RAraghavarora"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "RAraghavarora"
   lastfm           :
-  linkedin         : "bdsmith90"
+  linkedin         : "RAraghavarora"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 5961353/raghav-arora
   steam            :
   tumblr           :
   twitter          :
@@ -89,6 +89,7 @@ author:
   weibo            :
   xing             :
   youtube          :
+  lichess          : RAraghavarora
 
 
 # Reading Files
