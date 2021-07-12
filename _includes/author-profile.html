@@ -97,6 +97,9 @@
       {% if author.vine %}
         <li><a href="https://vine.co/u/{{ author.vine }}"><i class="fa fa-fw fa-vine" aria-hidden="true"></i> Vine</a></li>
       {% endif %}
+      {% if author.lichess %}
+        <li><a href="lichess.org/@/{{ author.lichess }}"><i class="fa fa-fw fa-vine" aria-hidden="true"></i> Lichess</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
