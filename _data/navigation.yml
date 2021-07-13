@@ -6,6 +6,12 @@ main:
   - title: "About"
     url: /about/
 
+  - title: "Resume"
+    url: /resume/
+
+  - title: "Contact"
+    url: /contact/
+
 chemistry-solver:
     - title: "Chemistry Solver"
       children:
@@ -53,4 +59,4 @@ projects:
       children:
         - title: "Chemistry Solver"
         - title: "Data Fitting"
-        
+       

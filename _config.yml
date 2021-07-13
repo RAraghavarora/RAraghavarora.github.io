@@ -154,7 +154,7 @@ timezone: US/Eastern
 
 
 # Plugins
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
