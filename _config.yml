@@ -211,10 +211,10 @@ include: ["_pages"]
 
 # Collections
 collections:
-    chemistry-solver:
+    dftb:
       output: true
       permalink: /:collection/:path/
-    data-fitting:
+    image-mosaicing:
       output: true
       permalink: /:collection/:path/
 
@@ -240,14 +240,14 @@ defaults:
   # _chemistry-solver
   - scope:
       path: ""
-      type: chemistry-solver
+      type: dftb
     values:
       layout: single
       author_profile: false
       read_time: true
       share: true
       sidebar:
-         nav: chemistry-solver
+         nav: dftb
   # _data-fitting
   - scope:
       path: ""
