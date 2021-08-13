@@ -3,14 +3,14 @@ permalink: /projects/
 title: "Projects"
 feature_row:
   - image_path: portfolio/chemistry-solver/launcher.png
-    url: /chemistry-solver/overview/
-    alt: "Chemistry Solver"
-    title: "Chemistry Solver"
-    excerpt: "A collection of tools that solve various chemistry problems, such as equation balancing, stoichiometry, combustion analysis, and more."
+    url: /dftb/overview/
+    alt: "Molecular Property Prediction with Neural Networks"
+    title: "Molecular Property Prediction with Neural Networks"
+    excerpt: "Deep Neural Network implementation using Molecular Descriptors and output of Density Functional Tight Binding Method to predict various properties of molecules. This property prediction is otherwise very computationally intensive if done via quantum-chemical simulations."
   - image_path: portfolio/data-fitting/chart-data-gui.png
-    url: /data-fitting/overview/
+    url: /image-mosaicing/overview/
     alt: "Data Fitting"
-    title: "Data Fitting"
-    excerpt: "A light-weight application that provides the functionality to create, customize, and save beautiful charts, perform polynomial regression, and make predictions through interpolation."
+    title: "Realtime Seamless Image Mosaicing"
+    excerpt: "A study and implementation of feature detection and image-mosaicing algorithms to seamlessly blend multiple images in Realtime"
 ---
 {% include feature_row type="left"%}
