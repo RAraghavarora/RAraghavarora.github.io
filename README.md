@@ -1,6 +1,6 @@
 Personal webpage of [Raghav Arora](raraghavarora.github.io)
 
-Made using: 
+Made using: [Minimal Mistakes][1]
 [![Minimal Mistakes live preview][2]][1]
 
 [1]: https://mmistakes.github.io/minimal-mistakes/
