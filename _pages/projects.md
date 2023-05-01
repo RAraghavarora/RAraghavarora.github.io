@@ -16,10 +16,11 @@ feature_row:
     url: /image-mosaicing/overview/
     alt: "Data Fitting"
     title: "Realtime Seamless Image Mosaicing"
-    excerpt: "A study and implementation of feature detection and image-mosaicing algorithms to seamlessly blend multiple images in Realtime"
+    excerpt: "A study and implementation of feature detection and image-mosaicing algorithms to seamlessly blend multiple images in Realtime
     
 
     (_Image generated using DALL-E with bing_)
     
+    "
 ---
 {% include feature_row type="left"%}
