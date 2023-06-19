@@ -1,11 +1,9 @@
 {% include base_path %}
-
 {% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
   {% capture teaser %}{{ site.teaser }}{% endcapture %}
 {% endif %}
-
 <div class="{{ include.type | default: "list" }}__item">
   {% if post.link %}
     <a href="{{ post.link }}" target="_blank">
@@ -13,13 +11,13 @@
     <a href="{{ base_path }}{{ post.url }}">
   {% endif %}
     <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      {% if include.type == "grid" and teaser != blank %}
+      {% if include.type == "grid" and post.teaser != blank %}
         <div class="archive__item-teaser">
           <img src=
             {% if teaser contains "http" %}
               "{{ teaser }}"
             {% else %}
-              "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+              "{{ post.teaser | prepend: "/images/" | prepend: base_path }}"
             {% endif %}
             alt="">
         </div>

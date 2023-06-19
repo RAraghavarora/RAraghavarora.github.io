@@ -1,5 +1,6 @@
 ---
 title: "Molecular Property Prediction using Neural Networks"
+teaser: TCP.jpg
 header:
     overlay_color: "#777"
 excerpt: "This is an ongoing research work I am doing as a part of my undergraduate thesis under the University of Luxembourg. As this is work in progress, some details will get updated with time."
