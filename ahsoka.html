@@ -11,18 +11,18 @@
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-    <link rel="stylesheet" href="./assets/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="/assets/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./assets/js/fontawesome.all.min.js"></script>
-    <script src="./assets/js/bulma-carousel.min.js"></script>
-    <script src="./assets/js/bulma-slider.min.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <script defer src="/assets/js/fontawesome.all.min.js"></script>
+    <script src="/assets/js/bulma-carousel.min.js"></script>
+    <script src="/assets/js/bulma-slider.min.js"></script>
+    <script src="/assets/js/index.js"></script>
     <style>
         .content {
             text-align: justify;
@@ -154,15 +154,13 @@
 
     <section class="section">
         <div class="container is-max-desktop">
-            <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content">
-                        <!-- <p>
-                            This paper introduces a novel method for determining the best room to place an object in, for embodied scene rearrangement. While state-of-the-art approaches rely on large language models (LLMs) or reinforcement learned (RL) policies for this task, our approach, CLIPGraphs, efficiently combines commonsense domain knowledge, data-driven methods, and recent advances in multimodal learning. Specifically, it (a) encodes a knowledge graph of prior human preferences about the room location of different objects in home environments, (b) incorporates vision-language features to support multimodal queries based on images or text, and (c) uses a graph network to learn object-room affinities based on embeddings of the prior knowledge and the vision-language features.
-                            We demonstrate that our approach provides better estimates of the most appropriate location of objects from a benchmark set of object categories in comparison with state-of-the-art baselines
-                        </p> -->
+                        <p>
+                            Assistive agents performing household tasks such as making the bed, preparing coffee, or cooking breakfast, often consider one task at a time by computing a plan of actions that accomplishes this task. The agents can be more efficient by anticipating upcoming tasks, and computing and executing an action sequence that jointly achieves these tasks. State of the art methods for task anticipating use data-driven deep network architectures and Large Language Models (LLMs) for task estimation but they do so at the level of high-level tasks and/or require a large number of training examples. Our framework leverages the generic knowledge of LLMs through a small number of prompts to perform high-level task anticipation, using the anticipated tasks as joint goals in a classical planning system to compute a sequence of finer-granularity actions that jointly achieve these goals. We ground and evaluate our framework's capabilities in realistic simulated scenarios in the VirtualHome environment and demonstrate a 31% reduction in the execution time in comparison with a system that does not consider upcoming tasks.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -170,25 +168,26 @@
         </div>
     </section>
 
-    <!-- <section class="section">
+    <section class="section">
         <div class="container is-max-desktop">
-            Abstract.
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Dataset</h2>
+                    <h2 class="title is-3">Household Domain</h2>
                     <div class="content">
-                        <p> The <span class="dnerf">IRONA</span> 30 web-scraped images for each of the 268 object categories used by <a href="https://yashkant.github.io/housekeep/">Housekeep</a>. With over 8000 images spanning over 268 common household item object categories, the IRONA dataset serves as a diverse and reliable dataset for our approach.
+                        <p> We create a household domain in PDDL where an agent has to plan a sequence of finer-granularity actions corresponding to different household tasks like doing laundry, cooking, etc. This domain consists of 33 independent actions, 5 different rooms, 33 objects distributed over 5-10 types, and 19 receptacles. A pictorial representation of the domain is shown below. 
+                        Since most common household tasks involve multiple finer-granularity actions, this domain is much more useful for evaluating the performance of our framework than the domains used in previous works. This domain can be further expanded to include more rooms and complexity for more realistic evaluation.
                         </p>
                     </div>
-                    <div class="content">
-                        <img src="assets/images/gandr-collage.jpg"> The above image is small subset of the IRONA dataset.
+                    <div class="content" style="text-align: center;">
+                        <img src="/images/ahsoka/Room_Map.png"> 
+                        <caption> Representation of the household domain.</caption>
                     </div>
                     <h2 class="subtitle has-text-centered">
                     </h2>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
