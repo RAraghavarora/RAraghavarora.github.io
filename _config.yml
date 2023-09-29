@@ -15,6 +15,8 @@ url                      : "https://raraghavarora.github.io"
 baseurl                  : 
 gh_repo                  : "https://github.com/RAraghavarora/RAraghavarora.github.io"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+google_analytics         : G-MRQ0R5NH1J
+
 # breadcrumbs            :  # true, false (default)
 words_per_minute         : 200
 comments:
@@ -52,7 +54,7 @@ social:
 analytics:
   provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "G-C24BQ6QX9R"
+    tracking_id          : "G-MRQ0R5NH1J"
 
 # Google AdSense
 google_ad_client         :
