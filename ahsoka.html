@@ -20,6 +20,10 @@ permalink: /ahsoka/
   align-items: center;
   text-align: center;
 }
+.row .action{
+  font-size: 30px;
+  padding: 0;
+}
 </style>
 <section class="hero">
   <div class="hero-body">
@@ -119,9 +123,7 @@ permalink: /ahsoka/
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
-                <h2 class="title is-3">Householdass="both">
-                  <caption> Eg: <i>Switch off</i> the <i>Bathroom Lights</i> </caption>
-                </div> Domain</h2>
+                <h2 class="title is-3">Household Domain</h2>
                 <div class="content">
                     <p> We create a household domain in PDDL where an agent has to plan a sequence of finer-granularity actions corresponding to different household tasks like doing laundry, cooking, etc. This domain consists of 33 independent actions, 5 different rooms, 33 objects distributed over 5-10 types, and 19 receptacles. A pictorial representation of the domain is shown below. 
                     Since most common household tasks involve multiple finer-granularity actions, this domain is much more useful for evaluating the performance of our framework than the domains used in previous works. This domain can be further expanded to include more rooms and complexity for more realistic evaluation.
@@ -144,19 +146,19 @@ permalink: /ahsoka/
           <div class="column is-four-fifths">
               <h2 class="title is-3">Actions performed in the Simulation</h2>
               <div class="content">
-                  <p> We create a household domain in PDDL where an agent has to plan a sequence of finer-granularity actions corresponding to different household tasks like doing laundry, cooking, etc. This domain consists of 33 independent actions, 5 different rooms, 33 objects distributed over 5-10 types, and 19 receptacles. A pictorial representation of the domain is shown below. 
-                  Since most common household tasks involve multiple finer-granularity actions, this domain is much more useful for evaluating the performance of our framework than the domains used in previous works. This domain can be further expanded to include more rooms and complexity for more realistic evaluation.
+                  <p> The low level actions p
                   </p>
               </div>
               <div class="row">
                 <div class="column" style="text-align: center;">
-                    <caption> <font size="5">"Move" action </font></caption> <br> 
+                    <caption class="action"> <b>"Move" action</b> </caption> <br> 
+                    <!-- <p class="action"> "Move" action </p> <br>  -->
                   <img src="/gifs/actions/move.gif" height="300" width="400"> <br>
                   
                   <caption> Eg: <i>Move</i> from <i>living room</i> to <i> kitchen </i></caption>
                 </div>
                 <div class="column" style="text-align: center;">
-                  <caption> <font size="5">"Pick" action</font></caption><br>
+                  <caption class="action"> <b>"Pick" action </b> </caption><br>
                   <img src="/gifs/actions/pick.gif" height="300" width="400"> <br>
 
                   <caption> Eg: <i>Pick</i> up an <i>apple</i> from <i>living room</i> </caption>
@@ -164,32 +166,32 @@ permalink: /ahsoka/
               </div>
               <div class="row">
                 <div class="column" style="text-align: center;">
-                  <caption><font size="5"> "Putdown" action</font></caption><br>
+                  <caption class="action"> <b>"Putdown" action </b> </caption><br>
                   <img src="/gifs/actions/putdown.gif" height="300" width="400"><br> 
                   <caption> Eg: <i>Putdown</i> the <i>apple</i> on the <i>plate</i> </caption>
                   </div>
                   
                   <div class="column" style="text-align: center;">
-                    <caption><font size="5"> "Open" action</font></caption><br>
+                    <caption class="action"> <b>"Open" action </b> </caption><br>
                     <img src="/gifs/actions/open.gif" height="300" width="400"> <br>
                     <caption> Eg: <i>Open</i> the <i>Kitchen Cabinet</i> </caption>
                     </div>
               </div>
               <div class="row">
                   <div class="column" style="text-align: center;">
-                    <caption><font size="5"> "Close" action</font></caption><br>
+                    <caption class="action"> <b>"Close" action </b> </caption><br>
                     <img src="/gifs/actions/close.gif" height="300" width="400"> <br>
                     <caption> Eg: <i>Close</i> the <i>curtain</i>  </caption>
                   </div>
                 <div class="column" style="text-align: center;">
-                  <caption><font size="5"> "Switchon" action</font></caption><br>
+                  <caption class="action"> <b>"Switchon" action </b> </caption><br>
                     <img src="/gifs/actions/switchon.gif" height="300" width="400"> <br>
                     <caption> Eg: <i>Switch on</i> the <i>computer</i>  </caption>
                   </div>
               </div>
               <div class="both">
                 <!-- <div class="column" style="text-align: center;"> -->
-                  <caption><font size="5"> "Swicthoff" action</font></caption><br>
+                  <caption class="action"> <b>"Swicthoff" action </b> </caption><br>
                   <img src="/gifs/actions/switchoff.gif" height="300" width="400"> <br>
                   <!-- <caption> Eg: <i>Switch off</i> the <i>Bathroom Lights</i> </caption> -->
               </div>
