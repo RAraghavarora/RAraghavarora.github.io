@@ -24,10 +24,30 @@ permalink: /ahsoka/
   font-size: 30px;
   padding: 0;
 }
-.content #video{
+
+@media screen and (max-width: 800px) {
+  #video{
   object-fit: cover;
-  width: 80%;
-  height: 100%;
+  width: 640px;
+  height: 480px;
+  }
+  #room{
+  object-fit: cover;
+  width: 640px;
+  height: 640px;
+  }
+}
+@media screen and (min-width: 800px) {
+  #video{
+  object-fit: cover;
+  width: 720px;
+  height: 576px;
+  }
+  #room{
+  object-fit: cover;
+  width: 720px;
+  height: 576px;
+  }
 }
 </style>
 <section class="hero">
@@ -135,7 +155,7 @@ permalink: /ahsoka/
                     </p>
                 </div>
                 <div class="content" style="text-align: center;">
-                    <img src="/images/ahsoka/Room_Map1.png"> 
+                    <img id="room" src="/images/ahsoka/Room_Map1.png"> <br>
                     <caption> Representation of the household domain.</caption>
                 </div>
                 <h2 class="subtitle has-text-centered">
