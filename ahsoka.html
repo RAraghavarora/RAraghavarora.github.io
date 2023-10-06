@@ -14,6 +14,13 @@ permalink: /ahsoka/
   flex: 50%;
   padding: 5px;
 }
+.video {
+  display: flex;
+  flex: 90%;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+}
 .both{
   /* display: flex;
   flex: 100%; */
@@ -25,7 +32,7 @@ permalink: /ahsoka/
   padding: 0;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   #video{
   object-fit: cover;
   width: 640px;
@@ -48,7 +55,7 @@ permalink: /ahsoka/
   width: 720px;
   height: 576px;
   }
-}
+} */
 </style>
 <section class="hero">
   <div class="hero-body">
@@ -155,7 +162,7 @@ permalink: /ahsoka/
                     </p>
                 </div>
                 <div class="content" style="text-align: center;">
-                    <img id="room" src="/images/ahsoka/Room_Map1.png"> <br>
+                    <img id="room" width="720px" height="600px" src="/images/ahsoka/Room_Map1.png"> <br>
                     <caption> Representation of the household domain.</caption>
                 </div>
                 <h2 class="subtitle has-text-centered">
@@ -241,9 +248,9 @@ permalink: /ahsoka/
                     <p> Our Framework utilizes the best of both worlds: LLMs anticipates the sequence of tasks to be performed, and PDDL planners use their internal heuristics to generate satisficing plans. The Example Video in the simulation environment - <i>VirtualHome</i>, is shown below:
                     </p>
                 </div>
-                <div class="content" style="text-align: center;">
-                    <iframe id="video" src="https://www.youtube.com/embed/PCcyuMkDyow?autoplay=1&loop=1">
-                    </iframe><br>
+                <div class="video">
+                    <iframe width="720px" height="576px" src="https://www.youtube.com/embed/PCcyuMkDyow?autoplay=1&loop=1"></iframe><br>
+
                     <caption> Representation Video of our framework showing advantage of anticipation.</caption>
                 </div>
                 <h2 class="subtitle has-text-centered">
