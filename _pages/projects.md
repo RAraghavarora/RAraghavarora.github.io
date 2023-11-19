@@ -2,7 +2,7 @@
 permalink: /projects/
 title: "Projects"
 feature_row:
-  - image_path: TCP.jpg
+  - image_path: images/TCP.jpg
     url: /dftb/overview/
     alt: "Molecular Property Prediction with Neural Networks"
     title: "Molecular Property Prediction with Neural Networks"
@@ -12,7 +12,7 @@ feature_row:
     (_Image generated using DALL-E with bing_)
     
     "
-  - image_path: image_blend.jpg
+  - image_path: images/image_blend.jpg
     url: /image-mosaicing/overview/
     alt: "Data Fitting"
     title: "Realtime Seamless Image Mosaicing"

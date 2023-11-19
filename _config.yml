@@ -10,10 +10,6 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
 # Site Settings
 locale                   : "en-US"
 title                    : "Raghav Arora"
@@ -26,7 +22,7 @@ gh_repo                  : "https://github.com/RAraghavarora/RAraghavarora.githu
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # remote_theme             : mmistakes/minimal-mistakes@4.24.0
 theme                    : minimal-mistakes-jekyll
-minimal_mistakes_skin    : "dark"
+minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # breadcrumbs            :  # true, false (default)
 words_per_minute         : 200
 comments:
@@ -277,6 +273,17 @@ defaults:
   - scope:
       path: ""
       type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+  - scope:
+      path: "dftb"
+      type: projects
     values:
       layout: single
       author_profile: true

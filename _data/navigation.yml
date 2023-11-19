@@ -1,17 +1,21 @@
 # main links
 main:
+  - title: "Home"
+    url: /
+    
   - title: "Projects"
     url: /projects/
 
-  - title: "About"
-    url: /about/
+  # - title: "About"
+  #   url: /about/
 
   - title: "Resume"
     url: /resume/
 
-  - title: "Contact"
-    url: /contact/
+  # - title: "Contact"
+  #   url: /contact/
 
   # - title: "AHSOKA"
   #   url: /ahsoka
+
 
