@@ -14,4 +14,3 @@ feature_row:
     title: "Curriculum Vitae"
     excerpt: "Detailed CV which explains the projects done in detail and includes additional information."
 ---
-{% include resume_row type="left" %}
