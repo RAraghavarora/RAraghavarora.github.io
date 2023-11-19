@@ -15,7 +15,8 @@ url                      : "https://raraghavarora.github.io"
 baseurl                  : 
 gh_repo                  : "https://github.com/RAraghavarora/RAraghavarora.github.io"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "dark"
 # breadcrumbs            :  # true, false (default)
 words_per_minute         : 200
 comments:
@@ -66,13 +67,13 @@ author:
   avatar           : "profile.jpg"
   bio              : Research Engineer at <a href="https://robotics.iiit.ac.in/" target="_blank">Robotics Research Centre, IIIT Hyderabad</a>. 2022 graduate from BITS Pilani, with B.E. Electrical and Electronics Engineering, and M.Sc Chemistry.
   location         :
-  email            : "raraghavarora@protonmail.com"
+  email            : "raRaghavAurora@gmail.com"
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : RaghavArora0
+  # facebook         : RaghavArora0
   foursquare       :
   github           : "RAraghavarora"
   google_plus      :
@@ -82,7 +83,7 @@ author:
   linkedin         : "RAraghavarora"
   pinterest        :
   soundcloud       :
-  stackoverflow    : 5961353/raghav-arora
+  # stackoverflow    : 5961353/raghav-arora
   steam            :
   tumblr           :
   twitter          : Raghav_Arora_
