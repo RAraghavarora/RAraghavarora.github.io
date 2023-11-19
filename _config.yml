@@ -15,8 +15,9 @@ url                      : "https://raraghavarora.github.io"
 baseurl                  : 
 gh_repo                  : "https://github.com/RAraghavarora/RAraghavarora.github.io"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "dark"
+# remote_theme             : mmistakes/minimal-mistakes@4.24.0
+theme                    : minimal-mistakes-jekyll
+minimal_mistakes_skin    : "dark"
 # breadcrumbs            :  # true, false (default)
 words_per_minute         : 200
 comments:
@@ -152,6 +153,11 @@ kramdown:
   enable_coderay: false
 
 
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -166,6 +172,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -215,15 +222,6 @@ compress_html:
 # Pages
 include: ["_pages"]
 
-# Collections
-collections:
-    dftb:
-      output: true
-      permalink: /:collection/:path/
-    image-mosaicing:
-      output: true
-      permalink: /:collection/:path/
-
 defaults:
   # _pages
   - scope:
@@ -243,25 +241,3 @@ defaults:
       comments: true
       share: true
       related: true
-  # _chemistry-solver
-  - scope:
-      path: ""
-      type: dftb
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      share: true
-      sidebar:
-         nav: dftb
-  # _data-fitting
-  - scope:
-      path: ""
-      type: data-fitting
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      share: true
-      sidebar:
-         nav: data-fitting
