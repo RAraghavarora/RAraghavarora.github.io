@@ -282,12 +282,12 @@ defaults:
       related: true
 
   - scope:
-      path: "dftb"
-      type: projects
+      path: ""
+      type: dftb
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
-      comments: true
       share: true
-      related: true
+      sidebar:
+         nav: dftb
