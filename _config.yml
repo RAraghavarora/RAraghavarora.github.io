@@ -97,7 +97,7 @@ analytics:
 # Google AdSense
 google_ad_client         :
 google_ad_slot           :
-
+github: [metadata]
 
 # Site Author
 author:
