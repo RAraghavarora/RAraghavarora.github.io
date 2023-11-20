@@ -1,6 +1,7 @@
 ---
 layout: single
 permalink: /contact/
+classes: wide
 title: "Contact"
 ---
 

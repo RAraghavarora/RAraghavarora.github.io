@@ -1,6 +1,7 @@
 ---
 permalink: /projects/
 title: "Projects"
+classes: wide
 feature_row:
   - image_path: images/TCP.jpg
     url: /dftb/overview/
