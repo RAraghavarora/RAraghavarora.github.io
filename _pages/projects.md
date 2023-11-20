@@ -9,7 +9,7 @@ feature_row:
     excerpt: "Deep Neural Network implementation using Molecular Descriptors and output of Density Functional Tight Binding Method to predict various properties of molecules. This property prediction is otherwise very computationally intensive if done via quantum-chemical simulations.
     
 
-    (_Image generated using DALL-E with bing_)
+    (_Image generated using DALL-E with Bing_)
     
     "
   - image_path: images/image_blend.jpg
@@ -19,7 +19,7 @@ feature_row:
     excerpt: "A study and implementation of feature detection and image-mosaicing algorithms to seamlessly blend multiple images in Realtime
     
 
-    (_Image generated using DALL-E with bing_)
+    (_Image generated using DALL-E with Bing_)
     
     "
 ---
