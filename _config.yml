@@ -129,7 +129,11 @@ author:
   weibo            :
   xing             :
   youtube          :
-  lichess          : RA_raghavarora
+  links:
+    - label: "Lichess"
+      icon: "fas fa-fw fa-chess"
+      url: "https://lichess.org/@/RA_raghavarora"
+  # lichess          : RA_raghavarora
 
 
 # Reading Files
