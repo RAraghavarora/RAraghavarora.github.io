@@ -266,7 +266,7 @@ compress_html:
     envs: development
 
 # Pages
-include: ["_pages"]
+include: ["_pages", "_dftb"]
 
 defaults:
   # _pages
