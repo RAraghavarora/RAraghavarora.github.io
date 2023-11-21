@@ -139,6 +139,13 @@ author:
   # lichess          : RA_raghavarora
 
 
+# ABOUT ME
+book:
+  title: "ACOTAR #3"
+  link: "https://www.goodreads.com/book/show/50659472-a-court-of-wings-and-ruin"
+
+
+
 # Reading Files
 include:
   - .htaccess
