@@ -273,7 +273,7 @@ compress_html:
     envs: development
 
 # Pages
-include: ["_pages", "_dftb"]
+include: ["_pages", "_dftb", "_posts"]
 
 defaults:
   # _pages
@@ -294,14 +294,3 @@ defaults:
       comments: true
       share: true
       related: true
-
-  - scope:
-      path: ""
-      type: dftb
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      share: true
-      sidebar:
-         nav: dftb

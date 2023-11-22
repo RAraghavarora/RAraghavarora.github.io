@@ -1,6 +1,6 @@
 ---
-title: "Stuff I liked"
-permalink: /dftb/random-stuff
+title: "Stuff I like"
+permalink: /random
 classes: wide
 layout: single
 ---
