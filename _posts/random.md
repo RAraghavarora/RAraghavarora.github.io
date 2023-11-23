@@ -16,6 +16,20 @@ I will like to hopefully organize this properly some day...
 
 ---
 
+![Calvin and Hobbes](./images/calvin1.jpg)
+
+---
+
 ![Jon in Garfield](./images/jon_garfield.jpg "Garfield comic")  
+
+---
+
+![Star Wars comic](./images/starwars.jpg){: width="350" height="300"}  
+Credits: [Enzo comics](https://enzocomics.tumblr.com/)
+
+---
+
+![I want to go home](./images/gohome.png){: width='350' height='300'}  
+Credits: [Cap](https://twitter.com/_caplog/)
 
 ---
