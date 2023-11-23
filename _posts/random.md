@@ -12,4 +12,10 @@ I will like to hopefully organize this properly some day...
 > “And yet what they are looking for could be found in one single rose, or in a little water.”  
 > And the little prince added: "But the eyes are blind. One must look with the heart..."
 
-— Antoine de Saint-Exupéry, The Little Prince 
+— Antoine de Saint-Exupéry, The Little Prince
+
+---
+
+![Jon in Garfield](./images/jon_garfield.jpg "Garfield comic")  
+
+---
