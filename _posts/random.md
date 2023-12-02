@@ -34,7 +34,7 @@ Credits: [Cap](https://twitter.com/_caplog/)
 
 ---
 
-![Comic about time stop. Guy spills coffee and it freezes mid air, he realizes that time has stopped. So he goes to bed and sleeps](./images/timestop.jpg){: width='350', height='300'}
+![Comic about time stop. Guy spills coffee and it freezes mid air, he realizes that time has stopped. So he goes to bed and sleeps](./images/timestop.jpg){: width='350', height='300'}  
 Credits: [Chris Hallbeck](https://www.instagram.com/chrishallbeck/)
 
 ---
@@ -46,5 +46,13 @@ Unable to find the original artist who made this comic. If you know the source, 
 
 ![Unexpectedly wholesome](./images/bully.png){: width='550', height='300'}  
 Credit: [Elder Cactus](https://www.eldercactus.com/)
+
+---
+
+![The real scientific method](./images/data.jpg){: width='550', height='300'}  
+
+---
+
+![Playing game stressfully](./images/game.jpg){: width='400', height='300'}
 
 ---
