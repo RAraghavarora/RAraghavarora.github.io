@@ -56,3 +56,11 @@ Credit: [Elder Cactus](https://www.eldercactus.com/)
 ![Playing game stressfully](./images/game.jpg){: width='400', height='300'}
 
 ---
+
+> “We make things beyond what we understand, as we always have done. Steam engines worked before we had a theory of thermodynamics; vaccines were developed before we knew how the immune system works; aircraft continue to fly to this day, despite the many gaps in our understanding of aerodynamics. When theory lags behind application, there will always be mathematical surprises lying in wait. The important thing is that we learn from these inevitable mistakes and don’t repeat them.”
+
+Excerpt From  
+[Humble Pi](https://www.goodreads.com/en/book/show/39074550)  
+Matt Parker
+
+---
