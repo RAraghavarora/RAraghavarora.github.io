@@ -1,6 +1,6 @@
 ---
 title: "Stuff I like"
-permalink: /random
+permalink: /random/
 classes: wide
 layout: single
 ---
