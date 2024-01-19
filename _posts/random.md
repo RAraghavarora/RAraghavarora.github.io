@@ -64,3 +64,17 @@ Excerpt From
 Matt Parker
 
 ---
+
+> "We don't make mistakes -- we just have happy accidents."
+
+- Bob Ross
+
+---
+
+{: .center-image}
+![The cartoon shows a great crowd of New Zealanders both Maori and Pakeha, including many other races. Text in the cartoon reads 'He aha te mea nui tea o? He tangata he tangata, he tangata!' Below the cartoon is the text 'Maori proverb. What is the most important thing in the world? It is people, it is people, it is people!' The context is the Waitangi Day celebrations in 2011.](/images/proverb.jpeg){: width='500', height='400'}
+
+Credits: [Maori Proverb](https://natlib.govt.nz/records/22703273), [Nerdfighters](https://www.youtube.com/watch?v=HVfqbnz96kk)
+
+---
+
