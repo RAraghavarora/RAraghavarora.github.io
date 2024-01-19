@@ -21,3 +21,5 @@ I am not much active on the social media handles, but can sometimes respond on L
         (Currently reading: <a href="{{site.book.link}}"> {{site.book.title}}</a> )
     </li>
 </ul>
+
+[(random)](/random/)

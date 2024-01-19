@@ -67,7 +67,7 @@ Matt Parker
 
 > "We don't make mistakes -- we just have happy accidents."
 
-- Bob Ross
+-- Bob Ross
 
 ---
 
@@ -77,4 +77,24 @@ Matt Parker
 Credits: [Maori Proverb](https://natlib.govt.nz/records/22703273), [Nerdfighters](https://www.youtube.com/watch?v=HVfqbnz96kk)
 
 ---
+> यह जीवन क्या है? निर्झर है, मस्ती ही इसका पानी है।  
+> सुख-दुख के दोनों तीरों से चल रहा राह मनमानी है।  
+> निर्झर कहता है, बढ़े चलो! देखो मत पीछे मुड़ कर!  
+> यौवन कहता है, बढ़े चलो! सोचो मत होगा क्या चल कर?  
+>
+> चलना है, केवल चलना है ! जीवन चलता ही रहता है !  
+> रुक जाना है मर जाना ही, निर्झर यह झड़ कर कहता है !
 
+-- आरसी प्रसाद सिंह (Indian Poet Arsi Prasad Singh)
+
+---
+
+> उम्र भर ख्याली भूतों से अगर मैं ना डरता।  
+> खुदा, मैं क्या ज़ोर से जी ता; खुदा, मैं क्या चैन से मरता  
+
+Rough translation:  
+If throughout life, I had not feared imaginary ghosts;  
+Lord, how intensely I would have lived!  
+Oh God, how peacefully I would have died!   
+
+-- [Ambrish Verma](https://www.imdb.com/title/tt30263074/)
