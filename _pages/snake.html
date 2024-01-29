@@ -42,7 +42,10 @@ function loop() {
   }
 
   count = 0;
-  context.clearRect(0,0,canvas.width,canvas.height);
+
+  context.fillStyle = '#ccffcc';
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  // context.clearRect(0,0,canvas.width,canvas.height);
 
   // move snake by it's velocity
   snake.x += snake.dx;
