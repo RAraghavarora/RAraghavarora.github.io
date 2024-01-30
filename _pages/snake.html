@@ -1,12 +1,17 @@
 <body>
-<canvas width="400" height="400" id="game"></canvas>
+<div id="game-container">
+  <canvas width="400" height="400" id="game"></canvas>
+  <div id="score">Score: 0</div>
+</div>
 <script>
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
+var scoreElement = document.getElementById('score');
 
 var grid = 16;
 var count = 0;
-  
+var score = 0;
+
 var snake = {
   x: 160,
   y: 160,
@@ -47,7 +52,7 @@ function loop() {
   context.fillRect(0, 0, canvas.width, canvas.height);
   // context.clearRect(0,0,canvas.width,canvas.height);
 
-  // move snake by it's velocity
+  // move snake by its velocity
   snake.x += snake.dx;
   snake.y += snake.dy;
 
@@ -93,6 +98,8 @@ function loop() {
       // canvas is 400x400 which is 25x25 grids 
       apple.x = getRandomInt(0, 25) * grid;
       apple.y = getRandomInt(0, 25) * grid;
+      score++;
+      scoreElement.textContent = 'Score: ' + score;
     }
 
     // check collision with all cells after this one (modified bubble sort)
@@ -109,6 +116,8 @@ function loop() {
 
         apple.x = getRandomInt(0, 25) * grid;
         apple.y = getRandomInt(0, 25) * grid;
+        score = 0;
+        scoreElement.textContent = 'Score: ' + score;
       }
     }
   });
@@ -116,7 +125,7 @@ function loop() {
 
 // listen to keyboard events to move the snake
 document.addEventListener('keydown', function(e) {
-  // prevent snake from backtracking on itself by checking that it's 
+  // prevent snake from backtracking on itself by checking that its 
   // not already moving on the same axis (pressing left while moving
   // left won't do anything, and pressing right while moving left
   // shouldn't let you collide with your own body)
@@ -146,4 +155,18 @@ document.addEventListener('keydown', function(e) {
 // start the game
 requestAnimationFrame(loop);
 </script>
+<style>
+  #game-container {
+      display: flex;
+      flex-direction: row;
+      text-align:center;
+  }
+
+  #game {
+      margin-right: 10px; /* Adjust the margin as needed */
+  }
+  canvas {
+      display: inline;
+  }
+</style>
 </body>
