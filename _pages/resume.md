@@ -10,7 +10,7 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Resume"
   - image_path: images/portfolio/resume/cv.png 
-    url: /PDFs/Raghav_CV.pdf
+    url: /PDFs/Arora_Raghav_CV.pdf
     alt: "CV"
     title: "Curriculum Vitae"
     excerpt: "Detailed CV which explains the projects done in detail and includes additional information."
