@@ -5,6 +5,8 @@
             <div id="score">Score: 0</div>
             <div id="high-score"><b>Highscore</b>: 0</div>
             <button onclick="clearHighScore()">Clear High Score</button>
+            <label for="speedSlider">Snake Speed:</label>
+            <input type="range" id="speedSlider" min="1" max="10" value="4" step="1" onchange="changeSnakeSpeed(this.value)">
         </div>
     </div>
     <script>
@@ -12,12 +14,17 @@
      var context = canvas.getContext('2d');
      var scoreElement = document.getElementById('score');
      var highScoreElement = document.getElementById('high-score');
-     var keylock = false; // used to prevent multiple key presses at once
+     var speedSlider = document.getElementById('speedSlider');
+     /* var snakeSpeedModifier = speedSlider.value; */
+     var snakeSpeedModifier = 10 - speedSlider.value;
+     var speed = parseInt(snakeSpeedModifier);
+     console.log(speed);
      
      var grid = 16;
      var count = 0;
      var score = 0;
-
+     var nextDirection = null; // Store the next direction
+     
      var snake = {
          x: 160,
          y: 160,
@@ -48,7 +55,7 @@
          requestAnimationFrame(loop);
 
          // slow game loop to 15 fps instead of 60 (60/15 = 4)
-         if (++count < 4) {
+         if (++count < speed) {
              return;
          }
 
@@ -136,17 +143,16 @@
                  }
              }
          });
+         // Update snake's direction after processing user input
+         if (nextDirection !== null) {
+             snake.dx = nextDirection.dx;
+             snake.dy = nextDirection.dy;
+             nextDirection = null;
+         }
      }
-
+     
      // listen to keyboard events to move the snake
      document.addEventListener('keydown', function(e) {
-         console.log('Key pressed:', e.key);
-         if(keylock) {
-             console.log('Key lock active')
-             return;
-         }
-         keylock = true;
-
          // prevent snake from backtracking on itself by checking that its 
          // not already moving on the same axis (pressing left while moving
          // left wont do anything, and pressing right while moving left
@@ -154,30 +160,27 @@
          
          // left arrow key or 'a'
          if ((e.which === 37 || e.which === 65) && snake.dx === 0) {
-             snake.dx = -grid;
-             snake.dy = 0;
+             nextDirection = { dx: -grid, dy: 0 };
          }
          // up arrow key, or 'w'
          else if ((e.which === 38 || e.which === 87) && snake.dy === 0) {
-             snake.dy = -grid;
-             snake.dx = 0;
+             nextDirection = { dx: 0, dy: -grid };
          }
          // right arrow key or 'd'
          else if ((e.which === 39 || e.which === 68) && snake.dx === 0) {
-             snake.dx = grid;
-             snake.dy = 0;
+             nextDirection = { dx: grid, dy: 0 };
          }
          // down arrow key or 's'
          else if ((e.which === 40 || e.which === 83) && snake.dy === 0) {
-             snake.dy = grid;
-             snake.dx = 0;
+             nextDirection = { dx: 0, dy: grid };
          }
 
-         // set a timeout to reset keylock after 100ms
-         setTimeout(function () {
-             keylock = false;
-         }, 10);
+     });
 
+     
+     speedSlider.addEventListener('input', function () {
+         snakeSpeed = parseInt(speedSlider.value);
+         snakeSpeedModifier = 15 - snakeSpeed;
      });
 
      // initialize high score on page load
@@ -191,6 +194,12 @@
          localStorage.removeItem('highScore');
          highScoreElement.innerHTML = '<strong>High Score: </strong>0';
      };                                
+
+     function changeSnakeSpeed(newSpeed) {
+         speed = 10 - parseInt(newSpeed);
+         console.log(speed);
+     };
+
      // start the game
      requestAnimationFrame(loop);
     </script>
