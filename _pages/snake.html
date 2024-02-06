@@ -30,7 +30,7 @@
             <h2 id="leaderboard-heading">Leaderboard</h2>
             <table id="leaderboard">
                 <tr><th>Name</th><th>Score</th></tr>
-                <tr><td>Anonymous</td><td>63</td></tr>
+                <tr><td>Raghav</td><td>36</td></tr>
             </table>
         </div>
     </div>
@@ -44,6 +44,7 @@
      /* var snakeSpeedModifier = speedSlider.value; */
      var snakeSpeedModifier = 10 - speedSlider.value;
      var speed = parseInt(snakeSpeedModifier);
+     var paused = false; // Variable to track pause state
      console.log(speed);
      
      var grid = 16;
@@ -78,7 +79,8 @@
 
      // game loop
      function loop() {
-         requestAnimationFrame(loop);
+         if (!paused)
+             requestAnimationFrame(loop);
 
          // slow game loop to 15 fps instead of 60 (60/15 = 4)
          if (++count < speed) {
@@ -171,7 +173,7 @@
              }
          });
          // Update snake's direction after processing user input
-         if (nextDirection !== null) {
+         if (!paused && nextDirection !== null) {
              snake.dx = nextDirection.dx;
              snake.dy = nextDirection.dy;
              nextDirection = null;
@@ -201,7 +203,21 @@
          else if ((e.which === 40 || e.which === 83) && snake.dy === 0) {
              nextDirection = { dx: 0, dy: grid };
          }
-
+         else if((e.which === 32) && !paused) {
+             paused = true;
+             console.log('paused');
+             context.fillStyle = 'rgba(0, 0, 0, 0.5)';
+             context.fillRect(0, 0, canvas.width, canvas.height);
+             context.fillStyle = 'white';
+             context.font = '48px serif';
+             context.fillText('Paused', 150, 200);
+             cancelAnimationFrame(loop); // Stop the game loop
+         }
+         else if((e.which === 32) && paused) {
+             paused = false;
+             console.log('unpaused');
+             requestAnimationFrame(loop); // Resume the game loop
+         }
      });
 
      // initialize high score on page load
@@ -219,7 +235,6 @@
 
      function changeSnakeSpeed(newSpeed) {
          speed = 10 - parseInt(newSpeed);
-         document.getElementById("speedsliderInput").value = speed;
          console.log(speed);
      };
 
