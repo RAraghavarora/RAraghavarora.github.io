@@ -1,14 +1,40 @@
 <body>
     <div id="game-container">
         <canvas width="400" height="400" id="game"></canvas>
-        <div id="score-container">
-            <div id="score">Score: 0</div>
-            <div id="high-score"><b>Highscore</b>: 0</div>
-            <button onclick="clearHighScore()">Clear High Score</button>
-            <label for="speedSlider">Snake Speed:</label>
-            <input type="range" id="speedSlider" min="1" max="10" value="4" step="1" onchange="changeSnakeSpeed(this.value)">
+        <div id="side-container">
+            <div id="score-container">
+                <div id="score">Score: 0</div>
+                <div id="high-score"><b>Highscore</b>: 0</div>
+                <button onclick="clearHighScore()">Clear High Score</button>
+                <label for="speedSlider">Snake Speed:</label>
+                <input type="range" id="speedSlider" min="1" max="10" value="4" step="1" onchange="changeSnakeSpeed(this.value)">
+            </div>
+
+            <div id="form-container">
+                <form
+                    action="https://formspree.io/f/mgegally"
+                    method="POST"
+                    id="form"
+                >
+                    <label>
+                        Your display name:
+                        <input type="text" name="name">
+                    </label>
+                    <input type="hidden" id="highscoreInput" name="highscore">
+                    <!-- your other form fields go here -->
+                    <button type="submit">Submit your highscore</button>
+                </form>
+            </div>
+        </div>
+        <div id="leaderboard-container"> 
+            <h2 id="leaderboard-heading">Leaderboard</h2>
+            <table id="leaderboard">
+                <tr><th>Name</th><th>Score</th></tr>
+                <tr><td>Anonymous</td><td>63</td></tr>
+            </table>
         </div>
     </div>
+
     <script>
      var canvas = document.getElementById('game');
      var context = canvas.getContext('2d');
@@ -121,6 +147,7 @@
                  if (score > currentHighScore) {
                      localStorage.setItem('highScore', score);
                      highScoreElement.innerHTML = '<strong>High Score</strong>: ' + score;
+                     document.getElementById("highscoreInput").value = score;
                  }
              }
 
@@ -177,17 +204,12 @@
 
      });
 
-     
-     speedSlider.addEventListener('input', function () {
-         snakeSpeed = parseInt(speedSlider.value);
-         snakeSpeedModifier = 15 - snakeSpeed;
-     });
-
      // initialize high score on page load
      window.onload = function () {
          var highScore = localStorage.getItem('highScore');
          if (highScore) {
              highScoreElement.innerHTML = '<strong>High Score: </strong>' + highScore ;
+             document.getElementById("highscoreInput").value = highScore;
          }
      };                            
      function clearHighScore() {
@@ -197,6 +219,7 @@
 
      function changeSnakeSpeed(newSpeed) {
          speed = 10 - parseInt(newSpeed);
+         document.getElementById("speedsliderInput").value = speed;
          console.log(speed);
      };
 
@@ -207,7 +230,7 @@
      #game-container {
          display: flex;
          flex-direction: row;
-         text-align:center;
+         align-items: flex-start;
      }
      #game {
          margin-right: 10px; /* Adjust the margin as needed */
@@ -215,12 +238,32 @@
      canvas {
          display: inline;
      }
-     #score, #high-score {
-         margin-left: 10px;   
+     #score,
+     #high-score {
+         margin-left: 10px;
      }
      #score-container {
          display: flex;
          flex-direction: column;
+         width: 150px;
+     }
+     #leaderboard-container {
+         text-align: center;
+         margin-top: 10px;
+         width: 300px;
+     }
+
+     #leaderboard {
+         border-collapse: collapse;
+         width: 150px; /* Set width to match container */
+         margin: 0 auto;
+     }
+     #form-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 200px;
      }
     </style>
+
 </body>
