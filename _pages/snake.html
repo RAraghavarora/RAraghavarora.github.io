@@ -22,7 +22,7 @@
                     </label>
                     <input type="hidden" id="highscoreInput" name="highscore">
                     <!-- your other form fields go here -->
-                    <button type="submit">Submit your highscore</button>
+                    <button type="submit">Submit your highscore and view leaderboard</button>
                 </form>
             </div>
         </div>
@@ -32,6 +32,7 @@
                 <tr><th>Name</th><th>Score</th></tr>
                 <tr><td>Aditya</td><td>117</td></tr>
                 <tr><td>Hacker</td><td>63</td></tr>
+                <tr><td>Pavitr Prabhakar</td><td>42</td></tr>
                 <tr><td>Raghav</td><td>36</td></tr>
             </table>
         </div>
@@ -240,6 +241,14 @@
          console.log(speed);
      };
 
+     document.getElementById("form").addEventListener("submit", function(e) {
+         e.preventDefault();
+         // Logic to calculate and store highscore
+         document.getElementById("leaderboard-container").style.display = "block";
+         console.log('Prevention check');
+         this.submit();
+     });
+
      // start the game
      requestAnimationFrame(loop);
     </script>
@@ -265,6 +274,7 @@
          width: 150px;
      }
      #leaderboard-container {
+         display: none;
          text-align: center;
          margin-top: 10px;
          width: 300px;
@@ -282,5 +292,5 @@
          width: 200px;
      }
     </style>
-
+Use the arrow keys/WASD to move. Space to pause the game.
 </body>
