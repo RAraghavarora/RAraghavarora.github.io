@@ -95,8 +95,8 @@ layout: timer
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data.min.js"></script>
 <script>
   // Set the target date and time
-  var target = moment.tz("2024-03-15T23:59:00", "America/Los_Angeles");
-  var vidtarget = moment.tz("2024-03-19T23:59:00", "America/Los_Angeles");
+  var target = moment.tz("2024-03-17T23:59:00", "America/Los_Angeles");
+  var vidtarget = moment.tz("2024-03-20T23:59:00", "America/Los_Angeles");
 
   // Update the countdown every second
   setInterval(function() {
