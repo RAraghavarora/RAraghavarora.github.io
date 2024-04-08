@@ -35,7 +35,7 @@ Credits: [Cap](https://twitter.com/_caplog/)
 ---
 Alternate version:
 
-![Grass is greener on the other side](/images/gooutside.png){: width='350' height='300'}  
+![Grass is greener on the other side](/images/gooutside.jpeg){: width='350' height='300'}  
 OG Credits: [Cap](https://twitter.com/_caplog/), (edit idea credits: [Nipunika](https://www.nipunika.info/)) (Poor editing by me...)
 
 ---
