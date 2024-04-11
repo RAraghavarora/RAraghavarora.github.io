@@ -1,0 +1,261 @@
+---
+layout: anticipate
+title: Anticipate And Act
+permalink: /ahsoka/
+---
+<style>
+.row {
+  display: flex;
+  padding: 10px;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+.video {
+  display: flex;
+  flex: 100%;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+}
+.both{
+  /* display: flex;
+  flex: 100%; */
+  align-items: center;
+  text-align: center;
+}
+.row .action{
+  font-size: 30px;
+  padding: 0;
+}
+
+/* @media screen and (max-width: 800px) {
+  #video{
+  object-fit: cover;
+  width: 640px;
+  height: 480px;
+  }
+  #room{
+  object-fit: cover;
+  width: 640px;
+  height: 640px;
+  }
+}
+@media screen and (min-width: 800px) {
+  #video{
+  object-fit: cover;
+  width: 720px;
+  height: 576px;
+  }
+  #room{
+  object-fit: cover;
+  width: 720px;
+  height: 576px;
+  }
+} */
+</style>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"> Anticipate & Act: Integrating LLMs and Classical Planning for Efficient Task Execution in Household Environments </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="http://raraghavarora.github.io/">Raghav Arora</a><sup>1</sup>*,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/sssshivvvv/">Shivam Singh</a><sup>1</sup>*,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/">Karthik Swaminathan</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://adata111.github.io/">Ahana Datta</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://snehasisb.github.io/">Snehasis Banerjee</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/brojeshwar/home">Brojeshwar Bhowmick</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://krrish94.github.io/">Krishna Murthy Jatavallabhula</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.bham.ac.uk/~sridharm/index.html">Mohan Sridharan</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://faculty.iiit.ac.in/~mkrishna/">Madhava Krishna</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Robotics Research Center, IIIT Hyderabad, India</span><br>
+            <span class="author-block"><sup>2</sup>TCS Research, Tata Consultancy Services, India</span><br>
+            <span class="author-block"><sup>3</sup>MIT CSAIL</span><br>
+            <span class="author-block"><sup>4</sup>Intelligent Robotics Lab, University of Birmingham, UK</span><br>
+            <span class="author-block">*Equal Contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <span>
+              <a href="/PDFs/Anticipate_Act__Supplementary_Material.pdf" class="external-link button is-normal is-rounded is-dark" >
+              <!-- </a>target="_self" download="https://drive.google.com/file/d/1WtsI0cPTjx_eWEx6aQD71Hy7D0PnGXUp/view?usp=sharing"> -->
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Supplementary Material</span>
+              </a>
+            </span>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://youtu.be/Q6V-8bXk8lA" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/AnticipateAndAct/AnticipateAndAct/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content">
+                    <p>
+                        Assistive agents performing household tasks such as making the bed, preparing coffee, or cooking breakfast, often consider one task at a time by computing a plan of actions that accomplishes this task. The agents can be more efficient by anticipating upcoming tasks, and computing and executing an action sequence that jointly achieves these tasks. State of the art methods for task anticipating use data-driven deep network architectures and Large Language Models (LLMs) for task estimation but they do so at the level of high-level tasks and/or require a large number of training examples. Our framework leverages the generic knowledge of LLMs through a small number of prompts to perform high-level task anticipation, using the anticipated tasks as joint goals in a classical planning system to compute a sequence of finer-granularity actions that jointly achieve these goals. We ground and evaluate our framework's capabilities in realistic simulated scenarios in the VirtualHome environment and demonstrate a 31% reduction in the execution time in comparison with a system that does not consider upcoming tasks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Household Domain</h2>
+                <div class="content">
+                    <p> We create a household domain in PDDL where an agent has to plan a sequence of finer-granularity actions corresponding to different household tasks like doing laundry, cooking, etc. This domain consists of 33 independent actions, 5 different rooms, 33 objects distributed over 5-10 types, and 19 receptacles. A pictorial representation of the domain is shown below.
+                    Since most common household tasks involve multiple finer-granularity actions, this domain is much more useful for evaluating the performance of our framework than the domains used in previous works. This domain can be further expanded to include more rooms and complexity for more realistic evaluation.
+                    </p>
+                </div>
+                <div class="content" style="text-align: center;">
+                    <img id="room" width="720px" height="600px" src="/images/ahsoka/Room_Map1.png"> <br>
+                    <caption> Representation of the household domain.</caption>
+                </div>
+                <h2 class="subtitle has-text-centered">
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-3">Actions performed in the Simulation</h2>
+              <div class="content">
+                  <p>
+                      Following are some examples of "low-level" actions that we perform in the simulation environment.
+                  </p>
+              </div>
+              <div class="row">
+                <div class="column" style="text-align: center;">
+                    <caption class="action"> <b>"Move" action</b> </caption> <br>
+                    <!-- <p class="action"> "Move" action </p> <br>  -->
+                  <img src="/gifs/actions/move.gif" height="300" width="400"> <br>
+
+                  <caption> Eg: <i>Move</i> from <i>living room</i> to <i> kitchen </i></caption>
+                </div>
+                <div class="column" style="text-align: center;">
+                  <caption class="action"> <b>"Pick" action </b> </caption><br>
+                  <img src="/gifs/actions/pick.gif" height="300" width="400"> <br>
+
+                  <caption> Eg: <i>Pick</i> up an <i>apple</i> from <i>living room</i> </caption>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column" style="text-align: center;">
+                  <caption class="action"> <b>"Putdown" action </b> </caption><br>
+                  <img src="/gifs/actions/putdown.gif" height="300" width="400"><br>
+                  <caption> Eg: <i>Putdown</i> the <i>apple</i> on the <i>plate</i> </caption>
+                  </div>
+
+                  <div class="column" style="text-align: center;">
+                    <caption class="action"> <b>"Open" action </b> </caption><br>
+                    <img src="/gifs/actions/open.gif" height="300" width="400"> <br>
+                    <caption> Eg: <i>Open</i> the <i>Kitchen Cabinet</i> </caption>
+                    </div>
+              </div>
+              <div class="row">
+                  <div class="column" style="text-align: center;">
+                    <caption class="action"> <b>"Close" action </b> </caption><br>
+                    <img src="/gifs/actions/close.gif" height="300" width="400"> <br>
+                    <caption> Eg: <i>Close</i> the <i>curtain</i>  </caption>
+                  </div>
+                <div class="column" style="text-align: center;">
+                  <caption class="action"> <b>"Switchon" action </b> </caption><br>
+                    <img src="/gifs/actions/switchon.gif" height="300" width="400"> <br>
+                    <caption> Eg: <i>Switch on</i> the <i>computer</i>  </caption>
+                  </div>
+              </div>
+              <div class="both">
+                <!-- <div class="column" style="text-align: center;"> -->
+                  <caption class="action"> <b>"Switchoff" action </b> </caption><br>
+                  <img src="/gifs/actions/switchoff.gif" height="300" width="400"> <br>
+                  <!-- <caption> Eg: <i>Switch off</i> the <i>Bathroom Lights</i> </caption> -->
+              </div>
+              <div class="both">
+                <caption> Eg: <i>Switch off</i> the <i>Bathroom Lights</i> </caption>
+              </div>
+
+              <h2 class="subtitle has-text-centered">
+              </h2>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Simulation Example Video</h2>
+                <div class="content">
+                    <p> Our Framework utilizes the best of both worlds: LLMs anticipates the sequence of tasks to be performed, and PDDL planners use their internal heuristics to generate satisficing plans. The Example Video in the simulation environment - <i>VirtualHome</i>, is shown below:
+                    </p>
+                </div>
+                <div class="both">
+                    <iframe width="720px" height="576px" src="https://www.youtube.com/embed/PCcyuMkDyow?autoplay=1&loop=1"></iframe><br>
+                </div>
+                <div class="both">
+                    <caption> Representation Video of our framework showing advantage of anticipation.</caption>
+                </div>
+                <h2 class="subtitle has-text-centered">
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
