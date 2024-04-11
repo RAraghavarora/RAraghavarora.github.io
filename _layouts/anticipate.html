@@ -1,0 +1,52 @@
+---
+layout: compress
+---
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <meta charset="utf-8">
+    <!-- Include your common meta tags, stylesheets, and scripts here -->
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+
+    <style>
+        .content {
+            text-align: justify;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- {% include ahsoka_head.html %} -->
+    {{ content }}
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p align="center">
+                            The template for this page was borrowed from <a href="https://nerfies.github.io/">https://nerfies.github.io/</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% include scripts.html %}
+    {% include footer/custom.html %}
+</body>
+
+</html>
