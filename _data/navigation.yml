@@ -2,7 +2,7 @@
 main:
   - title: "Home"
     url: /
-    
+
   - title: "Projects"
     url: /projects/
 
@@ -15,7 +15,5 @@ main:
   - title: "Contact"
     url: /contact/
 
-  # - title: "AHSOKA"
-  #   url: /ahsoka
-
-
+  - title: "AHSOKA"
+    url: /ahsoka
