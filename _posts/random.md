@@ -104,3 +104,9 @@ Lord, how intensely I would have lived!
 Oh God, how peacefully I would have died!   
 
 -- [Ambrish Verma](https://www.imdb.com/title/tt30263074/)
+
+> “If we do not let people know that it is possible to be different, the ones who are different will live their entire lives in a kind of cultural prison. And there are so many ways to be different that almost everyone ends up feeling imprisoned by some aspect of a society that only allows for the default path.”
+
+Excerpt From
+A Beautifully Foolish Endeavor (The Carls)
+Hank Green
