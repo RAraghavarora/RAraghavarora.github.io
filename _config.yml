@@ -17,7 +17,7 @@ title_separator          : "-"
 name                     : "Raghav Arora"
 description              : "Portfolio website containing my information about me as well as my projects. You can find my CV and contact information here as well."
 url                      : "https://raraghavarora.github.io"
-baseurl                  : 
+baseurl                  :
 gh_repo                  : "https://github.com/RAraghavarora/RAraghavarora.github.io"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # remote_theme             : mmistakes/minimal-mistakes@4.24.0
@@ -103,7 +103,7 @@ github: [metadata]
 author:
   name             : "Raghav Arora"
   avatar           : "images/profile.jpg"
-  bio              : Research Engineer at <a href="https://robotics.iiit.ac.in/" target="_blank">Robotics Research Centre, IIIT Hyderabad</a>. 2022 graduate from BITS Pilani, with B.E. Electrical and Electronics Engineering, and M.Sc Chemistry.
+  bio              : Upcoming graduate student at UT Autin; Research Engineer at <a href="https://robotics.iiit.ac.in/" target="_blank">Robotics Research Centre, IIIT Hyderabad</a>. 2022 graduate from BITS Pilani, with B.E. Electrical and Electronics Engineering, and M.Sc Chemistry.
   location         :
   email            : "raRaghavAurora@gmail.com"
   uri              :
