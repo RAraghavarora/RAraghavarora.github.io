@@ -4,7 +4,7 @@ layout: page
 permalink: /timer
 layout: timer
 ---
-# IROS paper submission deadline
+# AAAI abstract submission deadline
 <div id="countdown">
   <span>
     <span class="time" id="days"></span>
@@ -47,7 +47,7 @@ layout: timer
   </div>
 </div>
 
-# IROS video submission deadline
+# AAAI full paper submission deadline
 <div id="vid-countdown">
   <span>
     <span class="time" id="vid-days"></span>
@@ -95,8 +95,8 @@ layout: timer
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data.min.js"></script>
 <script>
   // Set the target date and time
-  var target = moment.tz("2024-03-17T23:59:00", "America/Los_Angeles");
-  var vidtarget = moment.tz("2024-03-20T23:59:00", "America/Los_Angeles");
+  var target = moment.tz("2024-08-07 23:59", "Etc/GMT+12");
+  var vidtarget = moment.tz("2024-08-15T23:59:00", "Etc/GMT+12");
 
   // Update the countdown every second
   setInterval(function() {
@@ -108,12 +108,14 @@ layout: timer
     var duration2 = moment.duration(vidtarget.diff(now));
 
     // Get the days, hours, minutes, and seconds remaining
-    var days = duration1.days();
+    var days = Math.floor(duration1.asDays());
+    // var days = duration1.days();
     var hours = duration1.hours();
     var minutes = duration1.minutes();
     var seconds = duration1.seconds();
     
-    var vid_days = duration2.days();
+    var vid_days = Math.floor(duration2.asDays());
+    // var vid_days = duration2.days();
     var vid_hours = duration2.hours();
     var vid_minutes = duration2.minutes();
     var vid_seconds = duration2.seconds();
