@@ -33,12 +33,12 @@ Credits: [Enzo comics](https://enzocomics.tumblr.com/)
 Credits: [Cap](https://twitter.com/_caplog/)
 
 ---
-Alternate version:
+<!-- Alternate version: -->
 
-![Grass is greener on the other side](/images/gooutside.jpeg){: width='350' height='300'}  
-OG Credits: [Cap](https://twitter.com/_caplog/), (edit idea credits: [Nipunika](https://www.nipunika.info/)) (Poor editing by me...)
+<!-- ![Grass is greener on the other side](/images/gooutside.jpeg){: width='350' height='300'}   -->
+<!-- OG Credits: [Cap](https://twitter.com/_caplog/), (edit idea credits: [Nipunika](https://www.nipunika.info/)) (Poor editing by me...) -->
 
----
+<!-- --- -->
 
 ![Comic about time stop. Guy spills coffee and it freezes mid air, he realizes that time has stopped. So he goes to bed and sleeps](/images/timestop.jpg){: width='350', height='300'}  
 Credits: [Chris Hallbeck](https://www.instagram.com/chrishallbeck/)
