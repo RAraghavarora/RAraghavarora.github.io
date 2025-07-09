@@ -6,7 +6,8 @@ title: "Contact"
 ---
 
 <img align="right" src="/images/dp.jpg" alt="My Picture" width="200"/>
-The best way to contact me is through the email: raRaghavAurora@gmail.com. (Yes, the "u" in the email is intentional and not a typo.)
+The best way to contact me is through 
+Email: <span class="obfuscated-email" data-email="raRaghavAurora@gmail.com"></span>. 
 
 
 I am not much active on the social media handles, but can sometimes respond on LinkedIn. Feel free to contact me for any potential research collaborations, or for a quick chess match at lichess ;-\)

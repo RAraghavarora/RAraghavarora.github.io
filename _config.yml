@@ -105,7 +105,7 @@ author:
   avatar           : "images/profile.jpg"
   bio              : Graduate student at UT Austin; Previously, Research Engineer at <a href="https://robotics.iiit.ac.in/" target="_blank">Robotics Research Centre, IIIT Hyderabad</a>. 2022 graduate from BITS Pilani, with B.E. Electrical and Electronics Engineering, and M.Sc Chemistry.
   location         :
-  email            : "raRaghavAurora@gmail.com"
+  # email            : "raRaghavAurora@gmail.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -116,7 +116,7 @@ author:
   github           : "RAraghavarora"
   google_plus      :
   keybase          :
-  instagram        : "RAraghavarora"
+  # instagram        : "RAraghavarora"
   lastfm           :
   linkedin         : "RAraghavarora"
   pinterest        :
@@ -133,9 +133,12 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.co.in/citations?user=EwGiQeIAAAAJ"
-    - label: "Lichess"
-      icon: "fas fa-fw fa-chess"
-      url: "https://lichess.org/@/RA_raghavarora"
+    - label: "BlueSky"
+      icon: "fas fa-brands fa-bluesky"
+      url: https://bsky.app/profile/ra-aurora.bsky.social
+    # - label: "Lichess"
+    #   icon: "fas fa-fw fa-chess"
+    #   url: "https://lichess.org/@/RA_raghavarora"
   # lichess          : RA_raghavarora
 
 

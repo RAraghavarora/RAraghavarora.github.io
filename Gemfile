@@ -8,7 +8,7 @@ gem 'font-awesome-rails'
 # gem "jekyll-archives"
 gem "minimal-mistakes-jekyll"
 gem "faraday-retry"
-gem 'nokogiri', '1.15', require: false 
+gem 'nokogiri', '1.18.8', require: false 
   platforms :ruby do
     gem 'mini_portile2'
     gem 'pkg-config'
@@ -23,4 +23,5 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
+  gem "jekyll-remote-theme"
 end
