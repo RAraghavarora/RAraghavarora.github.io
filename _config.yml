@@ -134,7 +134,7 @@ author:
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.co.in/citations?user=EwGiQeIAAAAJ"
     - label: "BlueSky"
-      icon: "fas fa-brands fa-bluesky"
+      icon: "fab fa-fw fa-bluesky"
       url: https://bsky.app/profile/ra-aurora.bsky.social
     # - label: "Lichess"
     #   icon: "fas fa-fw fa-chess"
