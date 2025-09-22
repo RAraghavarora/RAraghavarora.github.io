@@ -7,6 +7,12 @@ layout: single
 
 I will like to hopefully organize this properly some day...
 
+> "I hate and I love. And if you ask me how,  
+> I do not know: I only feel it, and I am torn in two."
+
+— Catullus (c. 84-c.54 BCE)  
+(Translated by Peter Whigham)
+
 > “The men where you live,” said the little prince, “raise five thousand roses in the same garden – and they do not find in it what they are looking for.”  
 > “They do not find it,” I replied.  
 > “And yet what they are looking for could be found in one single rose, or in a little water.”  
