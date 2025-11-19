@@ -88,6 +88,21 @@ Credits: [Maori Proverb](https://natlib.govt.nz/records/22703273), [Nerdfighters
 
 -- आरसी प्रसाद सिंह (Indian Poet Arsi Prasad Singh)
 
+Similar poem by Mary Oliver (from [A thousand mornings](https://www.goodreads.com/book/show/13588404-a-thousand-mornings))
+
+> I go down to the shore in the morning
+> and depending on the hour the waves
+> are rolling in or moving out,
+> and I say, oh, I am miserable,
+> what shall—
+> what should I do? And the sea says
+> in its lovely voice:
+> Excuse me, I have work to do.”
+
+Excerpt From
+A Thousand Mornings
+Mary Oliver
+
 ---
 
 > उम्र भर ख्याली भूतों से अगर मैं ना डरता।  
