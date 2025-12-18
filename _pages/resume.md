@@ -3,7 +3,7 @@ permalink: /resume/
 title: "Resume"
 feature_row:
   - image_path: images/portfolio/resume/resume.png
-    url: /PDFs/resume.pdf
+    url: /PDFs/dec2025_resume.pdf
     alt: "Resume"
     title: "Resume"
     excerpt: "One page resume containing necessary information of my education, skills and projects."
