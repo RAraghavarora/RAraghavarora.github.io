@@ -13,7 +13,7 @@ feature_row:
     url: /PDFs/arora.raghav.cv.pdf
     alt: "CV"
     title: "Curriculum Vitae"
-    excerpt: "Detailed CV which explains the projects done in detail and includes additional information."
+    excerpt: "Detailed CV which explains the projects done in detail and includes additional information. (Not updated for a while)"
     btn_class: "btn--primary"
     btn_label: "CV"
 ---
