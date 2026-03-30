@@ -138,3 +138,20 @@ Hank Green
 > It asked a crumb - of me.  
 
 -- Emily Dickinson
+
+> More than the fuchsia funnels breaking out
+> of the crabapple tree, more than the neighbor’s
+> almost obscene display of cherry limbs shoving
+> their cotton candy-colored blossoms to the slate
+> sky of Spring rains, it’s the greening of the trees
+> that really gets to me. When all the shock of white
+> and taffy, the world’s baubles and trinkets, leave
+> the pavement strewn with the confetti of aftermath,
+> the leaves come. Patient, plodding, a green skin
+> growing over whatever winter did to us, a return
+> to the strange idea of continuous living despite
+> the mess of us, the hurt, the empty. Fine then,
+> I’ll take it, the tree seems to say, a new slick leaf
+> unfurling like a fist to an open palm, I’ll take it all.
+
+-- Ada Limon
