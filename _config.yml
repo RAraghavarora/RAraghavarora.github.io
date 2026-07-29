@@ -103,7 +103,7 @@ github: [metadata]
 author:
   name             : "Raghav Arora"
   avatar           : "images/profile.jpg"
-  bio              : Graduate student at UT Austin; Previously, Research Engineer at <a href="https://robotics.iiit.ac.in/" target="_blank">Robotics Research Centre, IIIT Hyderabad</a>. 2022 graduate from BITS Pilani, with B.E. Electrical and Electronics Engineering, and M.Sc Chemistry.
+  bio              : Graduate student at UT Austin, advised by Prof. <a href="https://www.cs.utexas.edu/~pstone/" target="_blank">Peter Stone</a>. Works on household robots, humanoid manipulation, SLAM, TAMP, and RL guided planning. Previously, Research Engineer at <a href="https://robotics.iiit.ac.in/" target="_blank">Robotics Research Centre, IIIT Hyderabad</a>. 2022 graduate from BITS Pilani, with B.E. Electrical and Electronics Engineering, and M.Sc Chemistry.
   location         :
   # email            : "raRaghavAurora@gmail.com"
   uri              :
