@@ -17,11 +17,19 @@ permalink: /anticipatory-rl/
 
           <div class="column has-text-centered">
             <span>
-              <a href="#" class="external-link button is-normal is-rounded is-dark">
+              <a href="PDFs/masterthesis.pdf" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fas fa-file-pdf"></i>
                 </span>
                 <span>Thesis PDF</span>
+              </a>
+            </span>
+            <span>
+              <a href="https://github.com/RAraghavarora/anticipatory_rl" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Code</span>
               </a>
             </span>
           </div>
@@ -38,7 +46,13 @@ permalink: /anticipatory-rl/
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content">
                     <p>
-                        TODO: Abstract coming soon.
+                    Robots deployed in persistent environments, such as homes and restaurants, are increasingly asked to carry out long sequences of tasks where the world does not reset between instructions. 
+                    A myopic agent that optimizes only for the immediate task can inadvertently leave the environment in a state that raises the expected cost of future tasks.
+                    Anticipatory planning mitigates this by preparing for predictable future routines. 
+                    However, existing anticipatory planning methods rely on expensive, planner-generated offline datasets and are limited to a single-task lookahead objective, so they fail when preparatory actions must be amortized over a longer horizon. 
+                    In this thesis, we propose a neurosymbolic approach that learns an anticipatory value function online via Reinforcement Learning. This creates a multi-task credit horizon without requiring a planner-generated anticipatory cost dataset. 
+                    We deploy this value as a terminal heuristic to guide a cost-bounded symbolic search, and evaluate it in persistent two-room and three-room restaurants. Our value-guided anticipatory agent reduces total sequence cost by 31.8% (two-room) and 27.5% (three-room) relative to a myopic oracle, recovering 76% and 97% of the savings a clairvoyant planner attains with the future revealed in advance. The three-room restaurant isolates the benefit of reaching beyond a single task: a one-task supervised baseline recovers almost none of the saving (3.1%), whereas our multi-task value captures most of it (27.5%).
+
                     </p>
                 </div>
             </div>
