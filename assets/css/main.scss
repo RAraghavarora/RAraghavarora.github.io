@@ -29,3 +29,11 @@ html {
 .fa-bluesky {
   color: #74C0FC !important;
 }
+
+.page__content a:not(.btn) {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
