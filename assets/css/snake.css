@@ -1,0 +1,98 @@
+/* Keep the 404 game in the site's existing page, palette, and type. */
+.snake-404 #main { max-width: 960px; }
+.snake-404 .page { float: none; width: 100%; padding-right: 0; }
+.snake-arcade {
+  --snake-ink: #174d70;
+  --snake-muted: #466b7a;
+  --snake-accent: #126b96;
+  --snake-board-size: clamp(220px, calc(100svh - 230px), 400px);
+  display: grid;
+  grid-template-columns: minmax(0, var(--snake-board-size)) minmax(180px, 220px);
+  align-items: start;
+  gap: 24px;
+  width: 100%; max-width: 644px;
+  margin: 24px 0 0;
+  color: var(--snake-ink);
+  font: inherit;
+}
+.snake-arcade, .snake-arcade * { box-sizing: border-box; }
+.snake-arcade [hidden] { display: none !important; }
+.snake-arcade :is(button, select) { font: inherit; }
+.snake-arcade :is(button, select, summary) { cursor: pointer; }
+.snake-arcade:focus-visible, .snake-arcade :focus-visible { outline: 2px solid var(--snake-accent); outline-offset: 4px; }
+.snake-board-wrap { position: relative; overflow: hidden; width: 100%; border: 1px solid #abcab6; border-radius: 4px; background: #e2f3e5; }
+.snake-arcade canvas { display: block; width: 100%; height: auto; aspect-ratio: 1; touch-action: none; }
+.snake-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: safe center; overflow-y: auto; text-align: center; padding: 16px; background: #f0fff0ed; }
+.snake-eyebrow { color: var(--snake-muted); font-size: 10px; font-weight: 600; letter-spacing: .1em; }
+.snake-arcade .snake-overlay h3 { margin: 8px 0; font-size: 24px; color: var(--snake-ink); }
+.snake-arcade .snake-overlay p { margin: 0 0 16px; max-width: 240px; color: var(--snake-muted); font-size: 13px; }
+.snake-arcade .snake-brand h2 { margin: 0 0 12px; padding: 0; border: 0; font-size: 20px; line-height: 1.2; }
+.snake-stats { display: flex; gap: 28px; margin-bottom: 16px; }
+.snake-stats span { display: block; color: var(--snake-muted); font-size: 12px; }
+.snake-stats strong { display: block; font-size: 24px; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.snake-arcade button { min-height: 44px; padding: 8px 12px; border: 1px solid #9cb8ac; border-radius: 4px; background: transparent; color: var(--snake-ink); font-size: 13px; }
+.snake-arcade button:hover:enabled { background: #dfefe2; }
+.snake-arcade button:disabled { opacity: .45; cursor: default; }
+.snake-arcade button.snake-primary { background: var(--snake-accent); border-color: var(--snake-accent); color: white; min-width: 120px; }
+.snake-arcade button.snake-primary:hover { background: #145478; }
+.snake-toolbar { display: flex; flex-direction: column; gap: 12px; }
+.snake-difficulty { display: flex; align-items: center; gap: 10px; color: var(--snake-muted); font-size: 13px; margin: 0; }
+.snake-arcade select { width: auto; margin: 0; min-height: 44px; padding: 6px 28px 6px 10px; border: 1px solid #9cb8ac; border-radius: 4px; background: transparent; color: var(--snake-ink); font-size: 13px; }
+.snake-actions { display: flex; gap: 8px; }
+.snake-arcade .snake-instructions { margin: 16px 0 0; color: var(--snake-muted); font-size: 12px; line-height: 1.7; }
+.snake-touch-help { display: none; }
+.snake-arcade .snake-storage-note, .snake-arcade .snake-legacy { margin: 10px 0 0; color: var(--snake-muted); font-size: 11px; line-height: 1.6; }
+.snake-dpad { display: none; grid-template-columns: repeat(3, 44px); gap: 5px; justify-content: start; margin: 12px 0; }
+.snake-dpad button { font-size: 22px; padding: 4px; touch-action: manipulation; }
+.snake-dpad [data-direction="up"] { grid-column: 2; }
+.snake-dpad [data-direction="left"] { grid-column: 1; }
+.snake-hall { margin-top: 14px; padding-top: 12px; border-top: 1px solid #bdd4c5; font-size: 12px; }
+.snake-hall summary { color: var(--snake-ink); }
+.snake-hall summary span { display: none; }
+.snake-arcade .snake-hall p { color: var(--snake-muted); font-size: 12px; margin: 10px 0; }
+.snake-arcade .snake-hall table { display: table; width: 100%; margin: 0; font-size: 12px; color: var(--snake-ink); }
+.snake-hall :is(th, td) { padding: 6px 0; border-color: #bdd4c5; background: transparent; }
+.snake-hall :is(th, td):last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.snake-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 640px) {
+  .snake-arcade { grid-template-columns: minmax(0, 1fr); max-width: 360px; gap: 8px; margin-top: 18px; }
+  .snake-side { display: contents; }
+  .snake-board-wrap { grid-row: 2; width: min(100%, max(220px, calc(100svh - 390px))); justify-self: center; }
+  .snake-topbar { grid-row: 1; }
+  .snake-toolbar { grid-row: 3; }
+  .snake-dpad { grid-row: 4; }
+  .snake-instructions { grid-row: 5; }
+  .snake-storage-note { grid-row: 6; }
+  .snake-legacy { grid-row: 7; }
+  .snake-hall { grid-row: 8; }
+  .snake-topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .snake-arcade .snake-brand h2 { margin: 0; }
+  .snake-stats { margin: 0; gap: 20px; }
+  .snake-stats strong { font-size: 20px; }
+  .snake-stats span { font-size: 11px; }
+  .snake-toolbar { flex-direction: row; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .snake-dpad { display: grid; justify-content: center; margin: 8px 0; }
+  .snake-arcade .snake-instructions { margin-top: 10px; }
+  .snake-arcade .snake-overlay h3 { font-size: 20px; }
+  .snake-arcade .snake-overlay p { font-size: 12px; margin-bottom: 10px; }
+}
+@media (any-pointer: coarse) {
+  .snake-dpad { display: grid; }
+  .snake-touch-help { display: inline; }
+  .snake-desktop-help { display: none; }
+}
+/* Keep steering beside the other controls on phones with enough width. */
+@media (min-width: 350px) and (max-width: 640px) and (any-pointer: coarse) {
+  .snake-arcade { grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; }
+  .snake-topbar, .snake-board-wrap, .snake-instructions,
+  .snake-storage-note, .snake-legacy, .snake-hall { grid-column: 1 / -1; }
+  .snake-toolbar { grid-column: 1; grid-row: 3; flex-direction: column; justify-content: center; margin: 0; }
+  .snake-dpad { grid-column: 2; grid-row: 3; margin: 0; }
+  .snake-instructions { grid-row: 4; }
+  .snake-storage-note { grid-row: 5; }
+  .snake-legacy { grid-row: 6; }
+  .snake-hall { grid-row: 7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .snake-arcade *, .snake-arcade { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

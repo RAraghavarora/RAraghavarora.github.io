@@ -1,297 +1,46 @@
-<body>
-  <div id="game-container">
-    <canvas width="400" height="400" id="game"></canvas>
-    <div id="side-container">
-      <div id="score-container">
-        <div id="score">Score: 0</div>
-        <div id="high-score"><b>Highscore</b>: 0</div>
-        <button onclick="clearHighScore()">Clear High Score</button>
-        <label for="speedSlider">Snake Speed:</label>
-        <input type="range" id="speedSlider" min="1" max="10" value="7" step="1" onchange="changeSnakeSpeed(this.value)">
-      </div>
-
-      <div id="form-container">
-        <form
-          action="https://formspree.io/f/mgegally"
-          method="POST"
-          id="form"
-        >
-          <label>
-            Your display name:
-            <input type="text" name="name">
-          </label>
-          <input type="hidden" id="highscoreInput" name="highscore">
-          <!-- your other form fields go here -->
-          <button type="submit">Submit your highscore and view leaderboard</button>
-        </form>
-      </div>
-    </div>
-    <div id="leaderboard-container">
-      <h2 id="leaderboard-heading">Leaderboard</h2>
-      <table id="leaderboard">
-        <tr><th>Name</th><th>Score</th></tr>
-        <tr><td>Aditya</td><td>117</td></tr>
-        <tr><td>Slow Stricker:)</td><td>81</td></tr>
-        <tr><td>Hacker</td><td>63</td></tr>
-        <tr><td>Pavitr Prabhakar</td><td>42</td></tr>
-        <tr><td>Raghav</td><td>36</td></tr>
-      </table>
+<link rel="stylesheet" href="{{ '/assets/css/snake.css' | relative_url }}">
+<section class="snake-arcade" id="snake-arcade" aria-label="Snake arcade" aria-describedby="snake-instructions" tabindex="0">
+  <div class="snake-board-wrap">
+    <canvas id="snake-board" width="600" height="600" role="img" aria-label="Snake board. Use the controls below or arrow keys to play."></canvas>
+    <div class="snake-overlay" id="snake-overlay">
+      <span class="snake-eyebrow" id="snake-overlay-eyebrow">READY WHEN YOU ARE</span>
+      <h3 id="snake-overlay-title">A quick game?</h3>
+      <p id="snake-overlay-copy">Collect the food. Watch your tail.</p>
+      <button type="button" class="snake-primary" id="snake-play" disabled>Play Snake</button>
     </div>
   </div>
-
-  <script>
-    var canvas = document.getElementById('game');
-    var context = canvas.getContext('2d');
-    var scoreElement = document.getElementById('score');
-    var highScoreElement = document.getElementById('high-score');
-    var speedSlider = document.getElementById('speedSlider');
-    /* var snakeSpeedModifier = speedSlider.value; */
-    var snakeSpeedModifier = 10 - speedSlider.value;
-    var speed = parseInt(snakeSpeedModifier);
-    var paused = false; // Variable to track pause state
-    console.log(speed);
-
-    var grid = 16;
-    var count = 0;
-    var score = 0;
-    var nextDirection = null; // Store the next direction
-
-    var snake = {
-      x: 160,
-      y: 160,
-
-      // snake velocity. moves one grid length every frame in either the x or y direction
-      dx: grid,
-      dy: 0,
-
-      // keep track of all grids the snake body occupies
-      cells: [],
-
-      // length of the snake. grows when eating an apple
-      maxCells: 4
-    };
-    var apple = {
-      x: 320,
-      y: 320
-    };
-
-    // get random whole numbers in a specific range
-    // @see https://stackoverflow.com/a/1527820/2124254
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
-    }
-
-    // game loop
-    function loop() {
-      if (!paused)
-        requestAnimationFrame(loop);
-
-      // slow game loop to 15 fps instead of 60 (60/15 = 4)
-      if (++count < speed) {
-        return;
-      }
-
-      count = 0;
-
-      context.fillStyle = '#ccffcc';
-      context.fillRect(0, 0, canvas.width, canvas.height);
-      // context.clearRect(0,0,canvas.width,canvas.height);
-
-      // move snake by its velocity
-      snake.x += snake.dx;
-      snake.y += snake.dy;
-
-      // wrap snake position horizontally on edge of screen
-      if (snake.x < 0) {
-        snake.x = canvas.width - grid;
-      }
-      else if (snake.x >= canvas.width) {
-        snake.x = 0;
-      }
-
-      // wrap snake position vertically on edge of screen
-      if (snake.y < 0) {
-        snake.y = canvas.height - grid;
-      }
-      else if (snake.y >= canvas.height) {
-        snake.y = 0;
-      }
-
-      // keep track of where snake has been. front of the array is always the head
-      snake.cells.unshift({x: snake.x, y: snake.y});
-
-      // remove cells as we move away from them
-      if (snake.cells.length > snake.maxCells) {
-        snake.cells.pop();
-      }
-
-      // draw apple
-      context.fillStyle = 'black';
-      context.fillRect(apple.x, apple.y, grid-1, grid-1);
-
-      // draw snake one cell at a time
-      context.fillStyle = 'red';
-      snake.cells.forEach(function(cell, index) {
-
-        // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
-        context.fillRect(cell.x, cell.y, grid-1, grid-1);
-
-        // snake ate apple
-        if (cell.x === apple.x && cell.y === apple.y) {
-          snake.maxCells++;
-
-          // canvas is 400x400 which is 25x25 grids
-          apple.x = getRandomInt(0, 25) * grid;
-          apple.y = getRandomInt(0, 25) * grid;
-          score++;
-          scoreElement.textContent = 'Score: ' + score;
-
-          var storedHighScore = localStorage.getItem('highScore');
-          var currentHighScore = storedHighScore ? parseInt(storedHighScore) : 0;
-
-          // update the high score if needed
-          if (score > currentHighScore) {
-            localStorage.setItem('highScore', score);
-            highScoreElement.innerHTML = '<strong>High Score</strong>: ' + score;
-            document.getElementById("highscoreInput").value = score;
-          }
-        }
-
-        // check collision with all cells after this one (modified bubble sort)
-        for (var i = index + 1; i < snake.cells.length; i++) {
-
-          // snake occupies same space as a body part. reset game
-          if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
-            snake.x = 160;
-            snake.y = 160;
-            snake.cells = [];
-            snake.maxCells = 4;
-            snake.dx = grid;
-            snake.dy = 0;
-
-            apple.x = getRandomInt(0, 25) * grid;
-            apple.y = getRandomInt(0, 25) * grid;
-            score = 0;
-            scoreElement.textContent = 'Score: ' + score;
-          }
-        }
-      });
-      // Update snake's direction after processing user input
-      if (!paused && nextDirection !== null) {
-        snake.dx = nextDirection.dx;
-        snake.dy = nextDirection.dy;
-        nextDirection = null;
-      }
-    }
-
-    // listen to keyboard events to move the snake
-    document.addEventListener('keydown', function(e) {
-      // prevent snake from backtracking on itself by checking that its
-      // not already moving on the same axis (pressing left while moving
-      // left wont do anything, and pressing right while moving left
-      // shouldnt let you collide with your own body)
-
-      // left arrow key or 'a'
-      if ((e.which === 37 || e.which === 65) && snake.dx === 0) {
-        nextDirection = { dx: -grid, dy: 0 };
-      }
-      // up arrow key, or 'w'
-      else if ((e.which === 38 || e.which === 87) && snake.dy === 0) {
-        nextDirection = { dx: 0, dy: -grid };
-      }
-      // right arrow key or 'd'
-      else if ((e.which === 39 || e.which === 68) && snake.dx === 0) {
-        nextDirection = { dx: grid, dy: 0 };
-      }
-      // down arrow key or 's'
-      else if ((e.which === 40 || e.which === 83) && snake.dy === 0) {
-        nextDirection = { dx: 0, dy: grid };
-      }
-      else if((e.which === 32) && !paused) {
-        paused = true;
-        console.log('paused');
-        context.fillStyle = 'rgba(0, 0, 0, 0.5)';
-        context.fillRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = 'white';
-        context.font = '48px serif';
-        context.fillText('Paused', 150, 200);
-        cancelAnimationFrame(loop); // Stop the game loop
-      }
-      else if((e.which === 32) && paused) {
-        paused = false;
-        console.log('unpaused');
-        requestAnimationFrame(loop); // Resume the game loop
-      }
-    });
-
-    // initialize high score on page load
-    window.onload = function () {
-      var highScore = localStorage.getItem('highScore');
-      if (highScore) {
-        highScoreElement.innerHTML = '<strong>High Score: </strong>' + highScore ;
-        document.getElementById("highscoreInput").value = highScore;
-      }
-    };
-    function clearHighScore() {
-      localStorage.removeItem('highScore');
-      highScoreElement.innerHTML = '<strong>High Score: </strong>0';
-    };
-
-    function changeSnakeSpeed(newSpeed) {
-      speed = 10 - parseInt(newSpeed);
-      console.log(speed);
-    };
-
-    document.getElementById("form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      // Logic to calculate and store highscore
-      document.getElementById("leaderboard-container").style.display = "block";
-      console.log('Prevention check');
-      this.submit();
-    });
-
-    // start the game
-    requestAnimationFrame(loop);
-  </script>
-  <style>
-    #game-container {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-    }
-    #game {
-      margin-right: 10px; /* Adjust the margin as needed */
-    }
-    canvas {
-      display: inline;
-    }
-    #score,
-    #high-score {
-      margin-left: 10px;
-    }
-    #score-container {
-      display: flex;
-      flex-direction: column;
-      width: 150px;
-    }
-    #leaderboard-container {
-      display: none;
-      text-align: center;
-      margin-top: 10px;
-      width: 300px;
-    }
-
-    #leaderboard {
-      border-collapse: collapse;
-      width: 150px; /* Set width to match container */
-      margin: 0 auto;
-    }
-    #form-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 200px;
-    }
-  </style>
-  Use the arrow keys/WASD to move. Space to pause the game.
-</body>
+  <div class="snake-side">
+  <div class="snake-topbar">
+    <div class="snake-brand"><h2>Snake</h2></div>
+    <div class="snake-stats">
+      <div><span>Score</span><strong id="snake-score">0</strong></div>
+      <div><span>Personal best</span><strong id="snake-best">0</strong></div>
+    </div>
+  </div>
+  <div class="snake-toolbar">
+    <label class="snake-difficulty" for="snake-difficulty">Pace
+      <select id="snake-difficulty"><option value="easy">Easy</option><option value="normal" selected>Normal</option><option value="fast">Fast</option></select>
+    </label>
+    <div class="snake-actions"><button type="button" id="snake-pause" disabled>Pause</button><button type="button" id="snake-restart">Restart</button></div>
+  </div>
+  <p class="snake-instructions" id="snake-instructions"><span class="snake-desktop-help">Arrow keys / WASD to steer · Space to pause · Enter to play.</span><span class="snake-touch-help">Swipe the board or tap the arrows to steer.</span> Edges wrap. Your tail doesn't.</p>
+  <div class="snake-dpad" role="group" aria-label="Steer snake">
+    <button type="button" disabled data-direction="up" aria-label="Move up">↑</button>
+    <button type="button" disabled data-direction="left" aria-label="Move left">←</button>
+    <button type="button" disabled data-direction="down" aria-label="Move down">↓</button>
+    <button type="button" disabled data-direction="right" aria-label="Move right">→</button>
+  </div>
+  <p class="snake-storage-note" id="snake-storage-note">Personal bests stay on this device, one for each pace.</p>
+  <p class="snake-legacy" id="snake-legacy" hidden></p>
+  <details class="snake-hall">
+    <summary>Original hall of fame <span aria-hidden="true">↗</span></summary>
+    <p>From the original game. A little piece of this site's history.</p>
+    <table><caption class="snake-sr-only">Historical Snake scores</caption><thead><tr><th scope="col">Player</th><th scope="col">Score</th></tr></thead><tbody>
+      <tr><td>Aditya</td><td>117</td></tr><tr><td>Slow Stricker:)</td><td>81</td></tr><tr><td>Hacker</td><td>63</td></tr><tr><td>Pavitr Prabhakar</td><td>42</td></tr><tr><td>Raghav</td><td>36</td></tr>
+    </tbody></table>
+  </details>
+  </div>
+  <p class="snake-sr-only" id="snake-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+  <noscript><p>Enable JavaScript to play Snake. You can still use the Home link above.</p></noscript>
+</section>
+<script src="{{ '/assets/js/snake.js' | relative_url }}" defer></script>
